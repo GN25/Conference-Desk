@@ -1,0 +1,146 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Conference Desk//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:0e6d58751836a18ed266e80cf8bd4c6ff43e0eefcb694c3011dec05980393fbc@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250201T093000Z
+DTEND:20250201T100000Z
+SUMMARY:What the Spec?!: New Features in Apache Iceberg™ Table Format V3
+LOCATION:UB5.132
+DESCRIPTION:Frames schema evolution and change tracking for the attendee's 
+ move toward an open lakehouse\, with concrete format-level questions.\n\nQ
+ uestions:\nWhich row-lineage guarantees depend on the writer rather than t
+ he table format alone?\nHow should an existing V2 table be tested before r
+ elying on a V3 feature?\n\nhttps://fosdem.org/2025/schedule/event/fosdem-2
+ 025-4707-what-the-spec-new-features-in-apache-iceberg-table-format-v3/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4707-what-the-spec-n
+ ew-features-in-apache-iceberg-table-format-v3/
+END:VEVENT
+BEGIN:VEVENT
+UID:a5b41d2460727a5e4c8792c1726ef56324c023f3cc066e146970a1a97e03eb53@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250201T125000Z
+DTEND:20250201T132000Z
+SUMMARY:ODBC Takes an Arrow to the Knee
+LOCATION:UB5.132
+DESCRIPTION:Directly addresses the row-to-column conversion work at the bou
+ ndary between databases and the attendee's Python analytics.\n\nQuestions:
+ \nWhich database-to-Python paths still copy or convert data even through A
+ DBC?\nHow do driver type mappings handle decimals\, timestamps and nulls?\
+ n\nhttps://fosdem.org/2025/schedule/event/fosdem-2025-4803-odbc-takes-an-a
+ rrow-to-the-knee/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4803-odbc-takes-an-a
+ rrow-to-the-knee/
+END:VEVENT
+BEGIN:VEVENT
+UID:92fa72bdf932be768f17ea83911472764199fad88d327b677c837a1d3406df7f@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250201T150500Z
+DTEND:20250201T153500Z
+SUMMARY:dbt-score: a linter for your dbt model metadata
+LOCATION:UB5.132
+DESCRIPTION:The mandatory metadata-quality session addresses repeatable doc
+ umentation and contract checks across the attendee's data models.\n\nQuest
+ ions:\nHow can rules be introduced without turning every existing model in
+ to a blocking CI failure?\nHow do you distinguish metadata completeness fr
+ om the correctness of the underlying data?\n\nhttps://fosdem.org/2025/sche
+ dule/event/fosdem-2025-4335-dbt-score-a-linter-for-your-dbt-model-metadata
+ /
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4335-dbt-score-a-lin
+ ter-for-your-dbt-model-metadata/
+END:VEVENT
+BEGIN:VEVENT
+UID:011c9a4b5a09fe0e3995d3064e01b79d774e5874f721580613a9434796d2caf0@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250201T162500Z
+DTEND:20250201T165500Z
+SUMMARY:Enhancing Airflow for Analytics\, Data Engineering\, and ML at Wiki
+ media
+LOCATION:UB5.132
+DESCRIPTION:Connects orchestration and infrastructure changes to operating 
+ real data pipelines\, complementing the format and metadata talks.\n\nQues
+ tions:\nWhich migration checks caught failures that did not appear in isol
+ ated DAG tests?\nHow are storage credentials and task retries handled acro
+ ss these components?\n\nhttps://fosdem.org/2025/schedule/event/fosdem-2025
+ -4867-enhancing-airflow-for-analytics-data-engineering-and-ml-at-wikimedia
+ /
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4867-enhancing-airfl
+ ow-for-analytics-data-engineering-and-ml-at-wikimedia/
+END:VEVENT
+BEGIN:VEVENT
+UID:f305dce0e38eed9b304b31281d378eda9e4d782f8119b42e49fa44325cf69074@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250202T080000Z
+DTEND:20250202T085000Z
+SUMMARY:PostgreSQL Performance - 20 years of improvements
+LOCATION:UA2.220 (Guillissen)
+DESCRIPTION:Provides a historical benchmark perspective so database upgrade
+ s are evaluated against workloads rather than feature lists.\n\nQuestions:
+ \nHow did you keep benchmark comparisons meaningful across hardware and re
+ lease-era changes?\nWhich workload characteristics should an analytics tea
+ m preserve in its own upgrade benchmark?\n\nhttps://fosdem.org/2025/schedu
+ le/event/fosdem-2025-4615-postgresql-performance-20-years-of-improvements/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4615-postgresql-perf
+ ormance-20-years-of-improvements/
+END:VEVENT
+BEGIN:VEVENT
+UID:34bdc18e7e69391ab8ab0c3ebd457d9709535dfa41406d52ac930f0c1388788a@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250202T093000Z
+DTEND:20250202T100000Z
+SUMMARY:FawltyDeps: Finding undeclared and unused dependencies in your note
+ books and projects
+LOCATION:UD2.218A
+DESCRIPTION:Addresses a practical reproducibility failure in Python noteboo
+ ks that feed the analytical pipeline.\n\nQuestions:\nHow are optional impo
+ rts and environment-specific dependencies classified?\nHow can the check b
+ e integrated without silently removing dependencies used only at runtime?\
+ n\nhttps://fosdem.org/2025/schedule/event/fosdem-2025-5072-fawltydeps-find
+ ing-undeclared-and-unused-dependencies-in-your-notebooks-and-projects/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-5072-fawltydeps-find
+ ing-undeclared-and-unused-dependencies-in-your-notebooks-and-projects/
+END:VEVENT
+BEGIN:VEVENT
+UID:cfb4213999271de90a2440c362eda8a12bf1dee5b3ed6742e277c2b703193deb@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250202T100000Z
+DTEND:20250202T103000Z
+SUMMARY:What can PyArrow do for you - Array interchange\, storage\, compute
+  and transport
+LOCATION:UD2.218A
+DESCRIPTION:The mandatory Sunday session connects array interchange\, file 
+ storage and transport within one Python data path.\n\nQuestions:\nWhich dt
+ ype and nullability combinations prevent a zero-copy interchange?\nWhen sh
+ ould Arrow Flight replace a file-based boundary between two processing sta
+ ges?\n\nhttps://fosdem.org/2025/schedule/event/fosdem-2025-6092-what-can-p
+ yarrow-do-for-you-array-interchange-storage-compute-and-transport/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-6092-what-can-pyarro
+ w-do-for-you-array-interchange-storage-compute-and-transport/
+END:VEVENT
+BEGIN:VEVENT
+UID:8551f9c7376698adcea2977cb2a9afe03e8ddc9e2fee4d44a37208b147937d5d@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20250202T140000Z
+DTEND:20250202T145000Z
+SUMMARY:PostgreSQL Anonymizer and the battle for privacy
+LOCATION:UA2.220 (Guillissen)
+DESCRIPTION:Adds an explicit privacy step when analytical datasets are copi
+ ed to development or shared with collaborators.\n\nQuestions:\nHow can mas
+ king preserve analytical relationships without retaining re-identification
+  paths?\nWhat tests reveal that a supposedly anonymized dump still contain
+ s sensitive combinations?\n\nhttps://fosdem.org/2025/schedule/event/fosdem
+ -2025-4258-postgresql-anonymizer-and-the-battle-for-privacy/
+URL:https://fosdem.org/2025/schedule/event/fosdem-2025-4258-postgresql-anon
+ ymizer-and-the-battle-for-privacy/
+END:VEVENT
+END:VCALENDAR

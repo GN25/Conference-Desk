@@ -1,0 +1,1 @@
+For a conference preparation request, read conference-desk/SKILL.md and follow its shared workflow. Produce the completed pack, not a user homework list. Keep runtime code standard-library-only. Run the relevant tests after material helper changes. Keep personal runs in runs/; do not commit attendee data.

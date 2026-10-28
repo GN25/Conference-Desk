@@ -1,0 +1,79 @@
+{
+  "chosen": [
+    "d1bd257c-0076-58ea-9e50-3037060c32f8",
+    "fb05c4b6-4f71-51f9-a5b7-cc5bbc321171",
+    "6d049057-5612-520f-ad0c-eb535f660a98",
+    "ca4dc2c2-5453-5a4b-b07b-8129b98723bf",
+    "b6f8fe71-5e30-5e97-9fba-93c01c28ba78",
+    "67de2ce5-bf7e-5121-b8ce-9f7306003222",
+    "7ba5eee7-6956-5511-abb6-eb89b8efde8e",
+    "7069e332-71f1-5b61-9425-9cf3aae5d25f"
+  ],
+  "alternatives": [
+    {
+      "id": "e6295196-ece2-56a9-b744-fd21d9cb1b67",
+      "reason": "Time / room-change conflict",
+      "conflicts_with": [
+        "67de2ce5-bf7e-5121-b8ce-9f7306003222",
+        "7ba5eee7-6956-5511-abb6-eb89b8efde8e"
+      ],
+      "score": 5
+    },
+    {
+      "id": "fa6a6047-9e3e-5102-8336-ac301677e992",
+      "reason": "Overlaps Lunch",
+      "conflicts_with": [],
+      "score": 4
+    },
+    {
+      "id": "9bd2a10b-40fe-5ec9-8e28-562660a45941",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 4
+    },
+    {
+      "id": "9d6120ae-e5e7-5c63-8800-1b089c8e5c19",
+      "reason": "Overlaps Lunch",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "002a7d04-aa29-56c2-ab94-0de25e3694c7",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "e6486cd2-7b37-5471-b24f-420ca84ff4c5",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "6c95aa8a-f99d-56b5-90ec-0bf780d20d1a",
+      "reason": "Overlaps Lunch",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "bf4ef50b-72ea-581b-8938-f0dca26bcf6c",
+      "reason": "Time / room-change conflict",
+      "conflicts_with": [
+        "7069e332-71f1-5b61-9425-9cf3aae5d25f"
+      ],
+      "score": 3
+    },
+    {
+      "id": "b0706e49-c388-5871-8d67-48f5025d7b35",
+      "reason": "Below minimum relevance score",
+      "conflicts_with": [],
+      "score": 2
+    },
+    {
+      "id": "d3fb5fc8-7370-5f89-bad2-3a8b25365dfb",
+      "reason": "Outside attendance window",
+      "conflicts_with": [],
+      "score": 2
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Conference Desk//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:8d9edf800dd7367b372174d233c5426c81b922b157bc55ce144b468e4d8c15f3@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T100000Z
+DTEND:20260131T102000Z
+SUMMARY:API Remoting for llama.cpp: Near-Native GPU Speed in macOS Containe
+ rs
+LOCATION:UD2.120 (Chavanne)
+DESCRIPTION:Connects a local macOS development environment with Linux conta
+ iner tooling\, a concrete deployment boundary for this attendee.\n\nQuesti
+ ons:\nHow do small-batch latency and sustained throughput change independe
+ ntly across the bridge?\nWhich host and guest failure modes must an operat
+ or distinguish when acceleration stops?\n\nhttps://fosdem.org/2026/schedul
+ e/event/C9NF8K-api_remoting_for_llama_cpp_near-native_gpu_speed_in_macos_c
+ ontainers/
+URL:https://fosdem.org/2026/schedule/event/C9NF8K-api_remoting_for_llama_cp
+ p_near-native_gpu_speed_in_macos_containers/
+END:VEVENT
+BEGIN:VEVENT
+UID:b7e08cd922e863ab4986d37c3e0907d734c6a9ad861a8dc50d0cc2c1df33dacb@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T125500Z
+DTEND:20260131T131500Z
+SUMMARY:One GPU\, Many Models: What Works and What Segfaults
+LOCATION:UD2.120 (Chavanne)
+DESCRIPTION:Directly addresses the shared-GPU utilization and failure-isola
+ tion decisions that make a small local serving setup difficult to operate.
+ \n\nQuestions:\nWhich failure modes affect only one model versus every ten
+ ant on the GPU?\nHow should video-generation findings be validated before 
+ applying them to text inference?\n\nhttps://fosdem.org/2026/schedule/event
+ /B39JSW-one-gpu-many-models/
+URL:https://fosdem.org/2026/schedule/event/B39JSW-one-gpu-many-models/
+END:VEVENT
+BEGIN:VEVENT
+UID:0aa852e72facf11588c4329cfa44f8134f93c5b0202e27e4253223a9e666efc9@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T144000Z
+DTEND:20260131T150000Z
+SUMMARY:Supercharging LLM serving with Dynamo
+LOCATION:UD2.120 (Chavanne)
+DESCRIPTION:Covers request routing\, memory movement and fault tolerance\, 
+ complementing the single-GPU case with a scale-out design.\n\nQuestions:\n
+ At what workload size does disaggregation justify the extra operational co
+ mponents?\nWhat signals separate cache-routing benefits from extra transfe
+ r latency?\n\nhttps://fosdem.org/2026/schedule/event/Z7LBYT-supercharging_
+ llm_serving_with_dynamo/
+URL:https://fosdem.org/2026/schedule/event/Z7LBYT-supercharging_llm_serving
+ _with_dynamo/
+END:VEVENT
+BEGIN:VEVENT
+UID:b2791ccd818109b1c38d51b4a0255085408213452e1afe6f6769d917b5e6a75e@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T150500Z
+DTEND:20260131T152500Z
+SUMMARY:Taming the LLM Zoo with Docker Model Runner: Inference with OCI Art
+ ifacts\, llama.cpp\, and vLLM
+LOCATION:UD2.120 (Chavanne)
+DESCRIPTION:Connects model artifacts\, inference engines and a repeatable d
+ eployment lifecycle\, directly matching the attendee's operational goal.\n
+ \nQuestions:\nHow are a model artifact and a compatible engine version pin
+ ned together?\nWhat rollback behavior is available when weights download c
+ orrectly but fail at startup?\n\nhttps://fosdem.org/2026/schedule/event/VG
+ XWNS-taming_the_llm_zoo_with_docker_model_runner_inference_with_oci_artifa
+ cts_llama_c/
+URL:https://fosdem.org/2026/schedule/event/VGXWNS-taming_the_llm_zoo_with_d
+ ocker_model_runner_inference_with_oci_artifacts_llama_c/
+END:VEVENT
+BEGIN:VEVENT
+UID:9f9921a0581bb98f9b616bc19d631b6570e581630ce012c78b984a318b884aea@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T153000Z
+DTEND:20260131T155000Z
+SUMMARY:From Infrastructure to Production: A Year of Self-Hosted LLMs
+LOCATION:UD2.120 (Chavanne)
+DESCRIPTION:The mandatory session focuses on experience operating self-host
+ ed LLMs and ties the architecture talks to day-to-day service ownership.\n
+ \nQuestions:\nWhich operational problem surprised you after the first depl
+ oyment was already working?\nWhich load-balancing or recovery pattern woul
+ d you avoid for a small team?\n\nhttps://fosdem.org/2026/schedule/event/PD
+ 8WGF-from_infrastructure_to_production_a_year_of_self-hosted_llms/
+URL:https://fosdem.org/2026/schedule/event/PD8WGF-from_infrastructure_to_pr
+ oduction_a_year_of_self-hosted_llms/
+END:VEVENT
+BEGIN:VEVENT
+UID:b6b1df3319cc86487ad51b3de950fdc484635440e375d6ade8f5ebb21bdc0006@confer
+ ence-desk.local
+DTSTAMP:20261028T092208Z
+DTSTART:20260131T170000Z
+DTEND:20260131T172500Z
+SUMMARY:AI Security Monitoring: Detecting Threats Against Production ML Sys
+ tems
+LOCATION:UB5.132
+DESCRIPTION:Completes the operations agenda with monitoring at the AI layer
+ \, beyond generic infrastructure dashboards.\n\nQuestions:\nWhich proposed
+  detections can be validated without logging sensitive prompts?\nHow shoul
+ d false positives be assessed before connecting an alert to a response act
+ ion?\n\nhttps://fosdem.org/2026/schedule/event/ZXMKFM-ai_security_monitori
+ ng_detecting_threats_against_production_ml_systems/
+URL:https://fosdem.org/2026/schedule/event/ZXMKFM-ai_security_monitoring_de
+ tecting_threats_against_production_ml_systems/
+END:VEVENT
+END:VCALENDAR

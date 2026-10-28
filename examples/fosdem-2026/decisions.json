@@ -1,0 +1,171 @@
+{
+  "catalog_sha256": "725cb10a60b00a6836c512e60f4203eb1d2ae91123419b209445dc9f85a9e4e6",
+  "review": "Reviewed the complete 71-track inventory, title indexes for AI Plumbers, Containers, Security, Python, Software Performance, Confidential Computing and HPC/Big Data. Sunday-only tracks fall outside this Saturday visit. Read the AI, container and security abstracts; prioritized serving operations over embedded accelerator development, cryptographic migration and application-specific workloads. Fifteen plausible sessions have individual preparation notes. Speaker performance and security claims were not independently tested.",
+  "decisions": [
+    {
+      "id": "8271becf-e79b-5171-8bd8-1ef29b7bc81a",
+      "score": 3,
+      "why": "Useful for understanding the local serving interface, but this brief prioritizes operating models over adding modalities.",
+      "evidence": "how libmtmd works with llama-server",
+      "questions": [
+        "Where does multimodal preprocessing run relative to the serving process?",
+        "Which audio and image workloads should be benchmarked separately for memory pressure?"
+      ],
+      "preparation": "Sketch the current text-only request path and mark where image or audio preprocessing could add a bottleneck."
+    },
+    {
+      "id": "a7b99ac0-5b2d-56c3-aa58-c09ff0ebf8cc",
+      "score": 4,
+      "why": "Connects a local macOS development environment with Linux container tooling, a concrete deployment boundary for this attendee.",
+      "evidence": "The latency overhead of API remoting versus the throughput gain from host GPU execution.",
+      "questions": [
+        "How do small-batch latency and sustained throughput change independently across the bridge?",
+        "Which host and guest failure modes must an operator distinguish when acceleration stops?"
+      ],
+      "preparation": "Bring a simple host-versus-container comparison matrix. Treat the near-native performance wording as the speaker's claim to examine, not an independently verified result."
+    },
+    {
+      "id": "3b5822a7-0f1a-5dc4-9eaf-0f2da40c5741",
+      "score": 2,
+      "why": "A useful lightweight-runtime alternative, but its embedded deployment focus is secondary to running a shared LLM service.",
+      "evidence": "self-contained inference solution",
+      "questions": [
+        "Which model operators or dynamic dimensions still require special treatment at export?",
+        "How can an operator detect that a model export changed numerical behavior?"
+      ],
+      "preparation": "Record model formats in the current stack and note which would need a conversion before a tract trial."
+    },
+    {
+      "id": "f7e422fb-09a6-5e20-81ae-0ebb5cdbcede",
+      "score": 3,
+      "why": "Provides a baseline for container observability, although the AI-specific monitoring session is closer to the main goal.",
+      "evidence": "Prometheus and cAdvisor",
+      "questions": [
+        "Which resource metrics distinguish GPU-serving issues from ordinary container memory pressure?",
+        "How should retention and alert ownership be split between application and platform teams?"
+      ],
+      "preparation": "List the container metrics already available and identify missing request-level inference metrics."
+    },
+    {
+      "id": "a96cdbc6-7a56-5ab8-95d7-42fb97613ffe",
+      "score": 4,
+      "why": "Relevant to the macOS container boundary, but it overlaps the protected lunch and is retained as an alternative.",
+      "evidence": "run Linux container images directly on their Mac",
+      "questions": [
+        "Which isolation boundaries differ from a conventional Linux VM on macOS?",
+        "What integration work remains for GPU-enabled local inference?"
+      ],
+      "preparation": "Compare the architecture to the API-remoting talk. Consult the official session page for available recording or slides."
+    },
+    {
+      "id": "7e7d0327-a7b6-5cd6-8c7c-0d3dbfab3d59",
+      "score": 5,
+      "why": "Directly addresses the shared-GPU utilization and failure-isolation decisions that make a small local serving setup difficult to operate.",
+      "evidence": "MIG (hardware partitioning) and MPS (software sharing)",
+      "questions": [
+        "Which failure modes affect only one model versus every tenant on the GPU?",
+        "How should video-generation findings be validated before applying them to text inference?"
+      ],
+      "preparation": "Write down GPU model, memory budget and concurrent workloads. Separate the speaker's video-generation setting from the attendee's LLM setting."
+    },
+    {
+      "id": "f5fc91ce-8012-577f-aa61-690bf75b4764",
+      "score": 3,
+      "why": "An infrastructure-oriented model lifecycle alternative, but its OpenNebula prerequisite adds adoption work for this small local serving brief.",
+      "evidence": "OpenNebula-based cloud infrastructures",
+      "questions": [
+        "Which parts of the lifecycle require OpenNebula-specific state?",
+        "How are model versions and shared-filesystem permissions linked during deployment?"
+      ],
+      "preparation": "Mark which parts of an existing model import/deploy process could transfer without adopting a new infrastructure platform."
+    },
+    {
+      "id": "a04bee73-97c8-5e18-8def-72406e7fb20a",
+      "score": 3,
+      "why": "Useful for a mixed-vendor GPU fleet, but backend implementation detail is less urgent than service operations.",
+      "evidence": "what it is still missing",
+      "questions": [
+        "Which model operations still fall back or remain unsupported on the Vulkan backend?",
+        "How would you compare drivers without confounding model quantization or batching?"
+      ],
+      "preparation": "Note target GPU vendors and driver versions before evaluating compatibility claims."
+    },
+    {
+      "id": "f4294a63-9390-55fb-a636-c946ba665317",
+      "score": 3,
+      "why": "Adds an energy-measurement lens for a local service, but it is an optional deeper measurement topic under the six-session cap.",
+      "evidence": "performance–energy trade-offs",
+      "questions": [
+        "How should energy per completed request be measured under variable traffic?",
+        "Which power-limit experiments preserve acceptable tail latency?"
+      ],
+      "preparation": "Define useful work and latency constraints before comparing energy measurements across serving configurations."
+    },
+    {
+      "id": "f8b73ac0-d043-51a8-9bd4-d8f93aac746b",
+      "score": 4,
+      "why": "A practical sandboxing option for local binaries; the room-change conflict with the higher-priority serving talk makes it an explicit alternative.",
+      "evidence": "Uses TOML profiles instead of code-based rules.",
+      "questions": [
+        "Which filesystem and network permissions would a local inference process need?",
+        "How can a policy be exercised before it is applied to a production service?"
+      ],
+      "preparation": "Draft a minimal list of model directories, cache locations and outbound endpoints that the service needs."
+    },
+    {
+      "id": "da6657b7-fd6c-5fd2-ac90-a647d9043f36",
+      "score": 5,
+      "why": "Covers request routing, memory movement and fault tolerance, complementing the single-GPU case with a scale-out design.",
+      "evidence": "routes requests based on the KV cache hit rate and load",
+      "questions": [
+        "At what workload size does disaggregation justify the extra operational components?",
+        "What signals separate cache-routing benefits from extra transfer latency?"
+      ],
+      "preparation": "Draw prefill, decode and KV-cache ownership on one page; capture which mechanisms matter for a small deployment versus a multi-node one."
+    },
+    {
+      "id": "2ac97485-5f1e-53a0-8145-96dc2f37ee63",
+      "score": 5,
+      "why": "Connects model artifacts, inference engines and a repeatable deployment lifecycle, directly matching the attendee's operational goal.",
+      "evidence": "decoupling the model weights from the inference engine",
+      "questions": [
+        "How are a model artifact and a compatible engine version pinned together?",
+        "What rollback behavior is available when weights download correctly but fail at startup?"
+      ],
+      "preparation": "Bring a model inventory with format, size, license and engine requirements. Ask which parts the OCI artifact actually captures."
+    },
+    {
+      "id": "f710e0be-e49c-54af-aeb6-4c3ff819c805",
+      "score": 5,
+      "why": "The mandatory session focuses on experience operating self-hosted LLMs and ties the architecture talks to day-to-day service ownership.",
+      "evidence": "What works, what doesn't, and what tooling we still need to build together.",
+      "questions": [
+        "Which operational problem surprised you after the first deployment was already working?",
+        "Which load-balancing or recovery pattern would you avoid for a small team?"
+      ],
+      "preparation": "Prepare a failure log template covering symptoms, detection, mitigation and missing tooling. Do not treat a conference abstract as an incident dataset."
+    },
+    {
+      "id": "0669cfed-b084-52c7-9708-eb5a93a2589e",
+      "score": 5,
+      "why": "Completes the operations agenda with monitoring at the AI layer, beyond generic infrastructure dashboards.",
+      "evidence": "security-focused observability for production ML systems",
+      "questions": [
+        "Which proposed detections can be validated without logging sensitive prompts?",
+        "How should false positives be assessed before connecting an alert to a response action?"
+      ],
+      "preparation": "List model endpoints, trust boundaries and telemetry retention constraints. Capture candidate detection tests rather than assuming every advertised rule transfers."
+    },
+    {
+      "id": "4898cf9a-9354-5069-b11b-5c3af7735904",
+      "score": 2,
+      "why": "A useful hardware-stack survey, but lower priority and incompatible with staying for the AI monitoring session.",
+      "evidence": "software stacks that support them on Linux",
+      "questions": [
+        "Which NPU stacks expose a stable interface for production serving?",
+        "Which driver and runtime dependencies limit reproducible deployment?"
+      ],
+      "preparation": "Keep as follow-up reading if new accelerator hardware becomes part of the deployment brief."
+    }
+  ]
+}

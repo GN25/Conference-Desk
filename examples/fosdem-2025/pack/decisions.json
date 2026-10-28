@@ -1,0 +1,204 @@
+{
+  "catalog_sha256": "d8c08bc5b88815a579bccc0fc7252dbb9fb8057bc7e09cd978968505333fcc5e",
+  "review": "Reviewed the complete 78-track inventory and title indexes for Data Analytics, Cloud Native Databases, PostgreSQL, MySQL, Python and HPC/Big Data. Read every Data Analytics abstract and the relevant Sunday Python/PostgreSQL/HPC abstracts. Prioritized interchange, metadata, orchestration, reproducibility and privacy over engine implementation, graph-specific visualization, tensor layouts and distributed-database architecture. Eighteen relevant or plausible alternatives received individual notes. No talk recordings or software performance claims were tested.",
+  "decisions": [
+    {
+      "id": "d1bd257c-0076-58ea-9e50-3037060c32f8",
+      "score": 5,
+      "why": "Frames schema evolution and change tracking for the attendee's move toward an open lakehouse, with concrete format-level questions.",
+      "evidence": "how Row Lineage can enhance CDC capabilities",
+      "questions": [
+        "Which row-lineage guarantees depend on the writer rather than the table format alone?",
+        "How should an existing V2 table be tested before relying on a V3 feature?"
+      ],
+      "preparation": "Review current schema-change and CDC requirements. This is a historical 2025 abstract; do not use it as current release-status documentation."
+    },
+    {
+      "id": "9d6120ae-e5e7-5c63-8800-1b089c8e5c19",
+      "score": 3,
+      "why": "Shows when relational tables can support graph questions without a separate database, but graph workloads are optional for this brief.",
+      "evidence": "implementing the SQL/PGQ standard",
+      "questions": [
+        "Which graph queries benefit from the extension versus ordinary SQL joins?",
+        "How does graph construction affect memory usage for larger-than-memory source tables?"
+      ],
+      "preparation": "Bring one representative relationship query and separate data-loading costs from query execution in any comparison."
+    },
+    {
+      "id": "fa6a6047-9e3e-5102-8336-ac301677e992",
+      "score": 4,
+      "why": "Useful lakehouse foundations, but the session overlaps the protected lunch and the attendee already knows basic table formats.",
+      "evidence": "schema evolution, hidden partitioning, and ACID-compliant transactions",
+      "questions": [
+        "Which catalog responsibilities are essential for correctness across writers?",
+        "What is a minimal end-to-end test of schema evolution across two query engines?"
+      ],
+      "preparation": "Use as a follow-up foundation if the V3 session exposes a gap in table-format knowledge."
+    },
+    {
+      "id": "002a7d04-aa29-56c2-ab94-0de25e3694c7",
+      "score": 3,
+      "why": "Adds an implementation-level account of analytical performance, secondary to interchange and pipeline reliability.",
+      "evidence": "parallel execution pipelines",
+      "questions": [
+        "Which query shapes improved least after the optimizations?",
+        "What measurements separate ingestion throughput from analytical query latency under concurrent load?"
+      ],
+      "preparation": "List representative aggregations and data distributions; treat the headline speedup as a speaker claim in a specific workload."
+    },
+    {
+      "id": "fb05c4b6-4f71-51f9-a5b7-cc5bbc321171",
+      "score": 5,
+      "why": "Directly addresses the row-to-column conversion work at the boundary between databases and the attendee's Python analytics.",
+      "evidence": "fetch result sets in the Arrow format",
+      "questions": [
+        "Which database-to-Python paths still copy or convert data even through ADBC?",
+        "How do driver type mappings handle decimals, timestamps and nulls?"
+      ],
+      "preparation": "Draw one current SQL-to-dataframe path and mark serialization, transposition and memory ownership boundaries."
+    },
+    {
+      "id": "b0706e49-c388-5871-8d67-48f5025d7b35",
+      "score": 2,
+      "why": "A specialized tensor representation topic; this attendee mainly moves tabular analytical data.",
+      "evidence": "fixed and variable shape tensor array specifications",
+      "questions": [
+        "Which tensor shapes require conversion before reaching a NumPy consumer?",
+        "How is nullability represented when tensors are stored alongside tabular features?"
+      ],
+      "preparation": "Keep for a future tensor-heavy pipeline; avoid adding it solely to fill an open slot."
+    },
+    {
+      "id": "9bd2a10b-40fe-5ec9-8e28-562660a45941",
+      "score": 4,
+      "why": "Relevant to semi-structured ingestion and schema drift, but lower priority than the four selected pipeline and interchange sessions.",
+      "evidence": "support for dynamically changing data structure",
+      "questions": [
+        "How are type changes on a JSON path represented without breaking downstream queries?",
+        "When does path cardinality make the columnar representation expensive?"
+      ],
+      "preparation": "Bring a small schema-drift example and define expected query behavior for missing, null and type-changing fields."
+    },
+    {
+      "id": "6d049057-5612-520f-ad0c-eb535f660a98",
+      "score": 5,
+      "why": "The mandatory metadata-quality session addresses repeatable documentation and contract checks across the attendee's data models.",
+      "evidence": "programmatically define and enforce metadata rules",
+      "questions": [
+        "How can rules be introduced without turning every existing model into a blocking CI failure?",
+        "How do you distinguish metadata completeness from the correctness of the underlying data?"
+      ],
+      "preparation": "Prepare two real categories of metadata rules to discuss: ownership and column documentation. The demo brief contains no private models."
+    },
+    {
+      "id": "e6486cd2-7b37-5471-b24f-420ca84ff4c5",
+      "score": 3,
+      "why": "A possible destination for the analytical results, but the current brief prioritizes getting data reliably into that destination.",
+      "evidence": "key workflows and philosophies",
+      "questions": [
+        "How are semantic definitions and access rules maintained across many dashboards?",
+        "Which parts of a dashboard can be reviewed and versioned as code?"
+      ],
+      "preparation": "List dashboard consumers and their access needs before comparing visualization features."
+    },
+    {
+      "id": "ca4dc2c2-5453-5a4b-b07b-8129b98723bf",
+      "score": 5,
+      "why": "Connects orchestration and infrastructure changes to operating real data pipelines, complementing the format and metadata talks.",
+      "evidence": "integration between Airflow, Kubernetes, Spark, and Ceph",
+      "questions": [
+        "Which migration checks caught failures that did not appear in isolated DAG tests?",
+        "How are storage credentials and task retries handled across these components?"
+      ],
+      "preparation": "Sketch the handoffs between orchestrator, execution engine and storage. Capture migration sequencing and failure recovery lessons."
+    },
+    {
+      "id": "b6f8fe71-5e30-5e97-9fba-93c01c28ba78",
+      "score": 4,
+      "why": "Provides a historical benchmark perspective so database upgrades are evaluated against workloads rather than feature lists.",
+      "evidence": "basic benchmarks (both OLTP and OLAP)",
+      "questions": [
+        "How did you keep benchmark comparisons meaningful across hardware and release-era changes?",
+        "Which workload characteristics should an analytics team preserve in its own upgrade benchmark?"
+      ],
+      "preparation": "Bring a benchmark design with query mix, data size and cache-state controls; the talk is historical, not a recommendation for a current server version."
+    },
+    {
+      "id": "67de2ce5-bf7e-5121-b8ce-9f7306003222",
+      "score": 4,
+      "why": "Addresses a practical reproducibility failure in Python notebooks that feed the analytical pipeline.",
+      "evidence": "finds imports you forgot to declare",
+      "questions": [
+        "How are optional imports and environment-specific dependencies classified?",
+        "How can the check be integrated without silently removing dependencies used only at runtime?"
+      ],
+      "preparation": "Compare imports, declared dependencies and environment exports for a small public notebook before applying a rule to a larger project."
+    },
+    {
+      "id": "7ba5eee7-6956-5511-abb6-eb89b8efde8e",
+      "score": 5,
+      "why": "The mandatory Sunday session connects array interchange, file storage and transport within one Python data path.",
+      "evidence": "Array Interchange: Seamless data exchange between NumPy, pandas, and other libraries using zero-copy",
+      "questions": [
+        "Which dtype and nullability combinations prevent a zero-copy interchange?",
+        "When should Arrow Flight replace a file-based boundary between two processing stages?"
+      ],
+      "preparation": "Map the same SQL-to-dataframe path used for ADBC, adding the downstream serialization and transport boundaries."
+    },
+    {
+      "id": "e6295196-ece2-56a9-b744-fd21d9cb1b67",
+      "score": 5,
+      "why": "Highly relevant to mixing analytics with application traffic, but it conflicts with the attendee's required PyArrow session.",
+      "evidence": "hybrid (OLTP + OLAP) workload",
+      "questions": [
+        "Which resource limits protect application latency when large analytics queries run?",
+        "What evidence should trigger moving an analytical workload away from the primary?"
+      ],
+      "preparation": "Keep as the first follow-up alternative. Collect query plans and concurrent traffic characteristics before applying tuning advice."
+    },
+    {
+      "id": "6c95aa8a-f99d-56b5-90ec-0bf780d20d1a",
+      "score": 3,
+      "why": "Useful for safe schema changes, but overlaps the protected Sunday lunch.",
+      "evidence": "schema changes can result in downtime",
+      "questions": [
+        "How can a migration wait for a lock without creating a long blocking queue?",
+        "Which expand-and-contract steps still require careful lock-timeout settings?"
+      ],
+      "preparation": "Write an expected lock timeline for one schema change and compare it with the session's examples."
+    },
+    {
+      "id": "7069e332-71f1-5b61-9425-9cf3aae5d25f",
+      "score": 4,
+      "why": "Adds an explicit privacy step when analytical datasets are copied to development or shared with collaborators.",
+      "evidence": "Generating anonymized dumps for development environments",
+      "questions": [
+        "How can masking preserve analytical relationships without retaining re-identification paths?",
+        "What tests reveal that a supposedly anonymized dump still contains sensitive combinations?"
+      ],
+      "preparation": "List data relationships and invariants that a development copy must preserve. Treat masking as one control, not a proof of anonymity."
+    },
+    {
+      "id": "bf4ef50b-72ea-581b-8938-f0dca26bcf6c",
+      "score": 3,
+      "why": "An optional scaling path for Python jobs, but it overlaps the higher-priority privacy session.",
+      "evidence": "parallelization of distributed Python workloads",
+      "questions": [
+        "Which retry semantics are safe for tasks that write external state?",
+        "When does serialization or data movement outweigh parallel speedup?"
+      ],
+      "preparation": "Select one CPU-bound and one I/O-bound stage before considering a distributed rewrite."
+    },
+    {
+      "id": "d3fb5fc8-7370-5f89-bad2-3a8b25365dfb",
+      "score": 2,
+      "why": "An HPC monitoring alternative outside the Sunday departure window and secondary to this small analytics stack.",
+      "evidence": "performance data is also a valuable resource for users",
+      "questions": [
+        "How are per-job measurements attributed when resources are shared?",
+        "Which automatic interventions still require an operator's confirmation?"
+      ],
+      "preparation": "Retain the official link for a future HPC deployment rather than expanding this visit."
+    }
+  ]
+}

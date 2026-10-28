@@ -1,0 +1,26 @@
+{
+  "goal": "Platform engineer: operate a small self-hosted LLM service, from model artifacts and GPU sharing to serving reliability and AI-layer monitoring.",
+  "display_timezone": "Europe/Madrid",
+  "days": [
+    {
+      "date": "2026-01-31",
+      "start": "10:30",
+      "end": "18:40"
+    }
+  ],
+  "breaks": [
+    {
+      "date": "2026-01-31",
+      "start": "12:30",
+      "end": "13:15",
+      "label": "Lunch"
+    }
+  ],
+  "transition_minutes": 15,
+  "same_room_minutes": 0,
+  "max_sessions_per_day": 6,
+  "must_attend": [
+    "f710e0be-e49c-54af-aeb6-4c3ff819c805"
+  ],
+  "assumptions": "Historical FOSDEM 2026 replay with a synthetic attendee brief, not an attendance claim. Keep at most six sessions and use the gaps for notes, breaks and conversations. A 15-minute room-change allowance is a preference, not a measured route."
+}

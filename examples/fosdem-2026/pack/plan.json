@@ -1,0 +1,71 @@
+{
+  "chosen": [
+    "a7b99ac0-5b2d-56c3-aa58-c09ff0ebf8cc",
+    "7e7d0327-a7b6-5cd6-8c7c-0d3dbfab3d59",
+    "da6657b7-fd6c-5fd2-ac90-a647d9043f36",
+    "2ac97485-5f1e-53a0-8145-96dc2f37ee63",
+    "f710e0be-e49c-54af-aeb6-4c3ff819c805",
+    "0669cfed-b084-52c7-9708-eb5a93a2589e"
+  ],
+  "alternatives": [
+    {
+      "id": "a96cdbc6-7a56-5ab8-95d7-42fb97613ffe",
+      "reason": "Overlaps Lunch",
+      "conflicts_with": [],
+      "score": 4
+    },
+    {
+      "id": "f8b73ac0-d043-51a8-9bd4-d8f93aac746b",
+      "reason": "Time / room-change conflict",
+      "conflicts_with": [
+        "da6657b7-fd6c-5fd2-ac90-a647d9043f36",
+        "2ac97485-5f1e-53a0-8145-96dc2f37ee63"
+      ],
+      "score": 4
+    },
+    {
+      "id": "8271becf-e79b-5171-8bd8-1ef29b7bc81a",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "f7e422fb-09a6-5e20-81ae-0ebb5cdbcede",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "f5fc91ce-8012-577f-aa61-690bf75b4764",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "a04bee73-97c8-5e18-8def-72406e7fb20a",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "f4294a63-9390-55fb-a636-c946ba665317",
+      "reason": "Lower total priority under session cap",
+      "conflicts_with": [],
+      "score": 3
+    },
+    {
+      "id": "3b5822a7-0f1a-5dc4-9eaf-0f2da40c5741",
+      "reason": "Below minimum relevance score",
+      "conflicts_with": [],
+      "score": 2
+    },
+    {
+      "id": "4898cf9a-9354-5069-b11b-5c3af7735904",
+      "reason": "Below minimum relevance score",
+      "conflicts_with": [
+        "0669cfed-b084-52c7-9708-eb5a93a2589e"
+      ],
+      "score": 2
+    }
+  ]
+}
